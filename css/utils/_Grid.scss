@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @media only screen and (max-width: map-get($breakpoints, xs)) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.container-max {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.half-container {
+  width: 100%;
+  margin-right: auto;
+  padding-right: 5rem;
+
+  @media only screen and (max-width: map-get($breakpoints, xs)) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8rem;
+}
+
+.half-container {
+  max-width: calc(100% - ((100% - 1440px) / 2));
+}
+
+@media only screen and (min-width: map-get($breakpoints, xl)) {
+
+  .container {
+    max-width: map-get($breakpoints, xl);
+  }
+
+  .half-container {
+    max-width: none;
+    padding-right: 5rem;
+  }
+
+}
+
+@media only screen and (min-width: map-get($breakpoints, lg)) {
+
+  .container {
+    max-width: map-get($breakpoints, lg);
+  }
+
+}

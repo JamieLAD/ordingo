@@ -1,0 +1,45 @@
+$colours: (
+
+  brand: (
+    primary: #ED1C24,
+    primary-light: #FDE8E9,
+    secondary: #12B69D,
+    secondary-light: #E7F8F5,
+    tertiary: #F59E17,
+    tertiary-light: #FEF5E8
+  ),
+
+  text: (
+    dark: #121212,
+    light: #454545
+  ),
+
+  utils: (
+    lightgrey: #CCCCCC,
+    white: #FFFFFF,
+    offwhite: #F8F8F8,
+    border: #eee
+  )
+
+);
+
+$typography: (
+
+  main: 'Eina01',
+  fallback: sans-serif
+
+);
+
+$breakpoints: (
+
+  xs: 475px,
+  sm: 768px,
+  md: 1080px,
+  lg: 1280px,
+  xl: 1440px
+
+);
+
+$transition: .3s cubic-bezier(.23,1,.32,1);
+$transition-linear: .3s linear;
+$border-radius: 4px;

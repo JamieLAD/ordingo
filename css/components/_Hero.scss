@@ -1,0 +1,73 @@
+.hero {
+   min-height: 100vh;
+   position: relative;
+   background-color: map-get(map-get($colours, brand), primary);
+   background-image: url(../../assets/img/dots.svg);
+   background-size: cover;
+   background-position: top center;
+   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &-phones {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      height: 100%;
+      transform: translateX(20%);
+      background-image: url(../../assets/img/phones.png);
+      background-position: left top;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: 60%;
+         background-size: 120rem;
+         background-position: left bottom -10rem;
+      }
+   }
+
+   .container {
+
+      @media only screen and (max-width: map-get($breakpoints, xl)) {
+         max-width: 1300px;
+         padding-left: 5rem;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         max-width: 96rem;
+         padding-left: 5rem;
+      }
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, lg)) {
+      clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, md)) {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, sm)) {
+      min-height: 70vh;
+
+      &-phones {
+         display: none;
+      }
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, xs)) {
+      min-height: 64vh;
+      
+      .button-text {
+         display: none;
+      }
+
+      .title {
+         margin-top: 3rem;
+      }
+   }
+}

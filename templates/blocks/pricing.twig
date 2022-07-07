@@ -1,0 +1,25 @@
+ <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-info">
+        <h2 class="section-title">{{fields.title}}</h2>
+        <p class="pricing-text">{{fields.text}}</p>
+        <div class="buttons">
+          <a href="{{fields.primary_button.url}}" class="button secondary">{{fields.primary_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          <a href="{{fields.secondary_button.url}}" class="button button-text secondary">{{fields.secondary_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+      </div>
+      <div class="pricing-table">
+         <h2 class="pricing-price">{{fields.price}}</h2>
+         <p class="pricing-price-info">{{fields.price_description}}</p>
+         <div class="pricing-items">
+            {% for item in fields.checklist %}
+               <div class="pricing-item">
+                  <div class="pricing-item-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
+                  <span class="pricing-item-text">{{item.text}}</span>
+               </div>
+            {% endfor %}
+         </div>
+         <a href="{{fields.sign_up_button.url}}" class="button primary">{{fields.sign_up_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+      </div>
+    </div>
+  </section>

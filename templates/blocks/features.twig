@@ -1,0 +1,41 @@
+<section class="features" id="features">
+    <h2 class="section-title">{{fields.features_title}}</h2>
+    <div class="half-container">
+      <div class="features-preview">
+
+        <div class="features-laptop">
+          {% for item in fields.features_list %}
+            <div class="features-screen" data-features-image="{{loop.index}}" style="background-image:url('{{Image(item.image).src}}')"></div>
+          {% endfor %}
+        </div>
+
+        {% for item in fields.features_list %}
+           <div class="features-card primary" data-features-card="feature-{{loop.index}}">
+              <h3 class="features-card-title">{{item.heading}}</h3>
+              <p class="features-card-text">{{item.text}}</p>
+            </div>
+        {% endfor %}
+
+      </div>
+      <div class="features-items">
+
+        <div class="features-items-col">
+          {% for item in fields.features_list %}
+
+            {% if loop.index in [3,6] %}
+              </div>
+              <div class="features-items-col">
+            {% endif %}
+
+              <div class="features-item primary" data-features-link="feature-{{loop.index}}">
+                <div class="features-item-icon"><ion-icon name="{{item.icon}}"></ion-icon></div>
+                <span class="features-item-title">{{item.heading}}</span>
+                <p class="features-item-text">{{item.text}}</p>
+              </div>
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </section>

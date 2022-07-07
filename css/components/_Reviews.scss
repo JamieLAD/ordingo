@@ -1,0 +1,110 @@
+.reviews {
+   padding-top: 6rem;
+   padding-bottom: 12rem;
+
+   @media only screen and (max-width: map-get($breakpoints, md)) {
+      padding-bottom: 8rem;
+   }
+
+   &-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+   }
+
+   &-score {
+      margin-left: 1rem;
+   }
+
+   .section-title {
+      text-align: center;
+      margin-bottom: 6rem;
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         margin-bottom: 3rem;
+      }
+   }
+
+   &-cards-row {
+      padding-top: 3rem;
+      overflow: hidden;
+
+      &:nth-of-type(1) {
+
+         .reviews-cards-slide {
+            animation-name: reviews-ltr;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+         }
+      }
+
+      &:nth-of-type(2) {
+
+         .reviews-cards-slide {
+            animation-name: reviews-rtl;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+         }
+
+         @media only screen and (max-width: map-get($breakpoints, xs)) {
+            display: none;
+         }
+      }
+   }
+
+   &-cards-slide {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+   }
+
+   &-card {
+      background-color: map-get(map-get($colours,utils), offwhite);
+      padding: 3rem;
+      border-radius: 1rem;
+      color: map-get(map-get($colours, text), light);
+      font-size: 1.6rem;
+      width: calc(100% / 4);
+      flex-shrink:0;
+      transition: $transition;
+
+      &:hover {
+         transform: translateY(-1rem);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         width: calc(100% / 3);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: calc(100% / 2);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         width: 100%;
+      }
+   }
+
+   &-card-stars {
+      background-color: map-get(map-get($colours,brand), secondary-light);
+      display: inline-flex;
+      padding: 1rem;
+      border-radius: $border-radius;
+      gap: .5rem;
+      color: map-get(map-get($colours,brand), secondary);
+      margin-bottom: 1.5rem;
+   }
+
+   &-card-title {
+      color: map-get(map-get($colours, text), dark);
+      margin-bottom: 1.5rem;
+   }
+
+   &-card-text {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+   }
+}

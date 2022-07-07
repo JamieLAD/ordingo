@@ -1,0 +1,47 @@
+.get-started {
+   padding-top: 12rem;
+   
+   @media only screen and (max-width: map-get($breakpoints, sm)) {
+      padding-top: 0;
+   }
+
+   .container {
+      padding: 12rem 0;
+      border-bottom: 1px solid map-get(map-get($colours, utils), lightgrey);
+      border-top: 1px solid map-get(map-get($colours, utils), lightgrey);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         padding: 6rem 0;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         padding: 3rem;
+      }
+   }
+
+   .section-title {
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         text-align: center;
+         margin-bottom: 2rem;
+      }
+   }
+
+   &-text {
+      max-width: 44ch;
+      text-align: center;
+      margin-bottom: 4rem;
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, xs)) {
+      
+      .button-text {
+         display: none;
+      }
+   }
+}

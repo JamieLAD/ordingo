@@ -1,0 +1,43 @@
+@keyframes levitate {
+
+  from {
+    transform: translateX(-50%) translateY(calc(-50% + 10px));
+  }
+  
+  to {
+    transform: translateX(-50%) translateY(calc(-50% - 10px));
+  }
+
+}
+
+@keyframes reviews-ltr {
+
+  0% {
+    transform: translateX(0rem);
+  }
+
+  50% {
+    transform: translateX(-40rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+
+}
+
+@keyframes reviews-rtl {
+
+  0% {
+    transform: translateX(-40rem);
+  }
+
+  50% {
+    transform: translateX(0rem);
+  }
+
+  100% {
+    transform: translateX(-40rem);
+  }
+
+}

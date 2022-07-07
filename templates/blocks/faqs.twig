@@ -1,0 +1,22 @@
+<section class="faq" id="faqs">
+    <div class="container">
+      <h2 class="section-title">{{fields.title}}</h2>
+      <div class="faq-items">
+
+        {% for item in fields.faqs %}
+
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <span class="faq-item-name">{{item.question}}</span>
+              <span class="faq-item-icon"><ion-icon name="chevron-down-outline"></ion-icon></span>
+            </div>
+            <div class="faq-item-inner">
+              <p>{{item.answer}}</p>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>

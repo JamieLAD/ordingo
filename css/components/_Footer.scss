@@ -1,0 +1,161 @@
+.footer {
+   padding: 12rem 0;
+
+   @media only screen and (max-width: map-get($breakpoints, md)) {
+      padding: 8rem 0 5rem 0;
+   }
+
+   &-main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 8rem;
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &-logo {
+      width: 16rem;
+   }
+
+   &-socials {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         margin-top: 2rem;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         margin-top: 1rem;
+      }
+   }
+
+   &-social {
+      background-color: map-get(map-get($colours, brand), secondary-light);
+      color: map-get(map-get($colours, brand), secondary);
+      width: 3.6rem;
+      height: 3.6rem;
+      display: inline-flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      transition: $transition;
+
+      &:hover {
+         background-color: map-get(map-get($colours, brand), secondary);
+         color: map-get(map-get($colours, utils), white);
+      }
+   }
+
+   &-text {
+      font-size: 1.6rem;
+      max-width: 40ch;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         display: none;
+      }
+   }
+
+   &-title {
+      margin-bottom: 2rem;
+
+      &.primary {
+         color: map-get(map-get($colours, brand), primary);
+      }
+
+      &.secondary {
+         color: map-get(map-get($colours, brand), secondary);
+      }
+
+      &.tertiary {
+         color: map-get(map-get($colours, brand), tertiary);
+      }
+   }
+
+   &-nav-item {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      &:last-of-type {
+         margin-bottom: 0;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         font-size: 1.6rem;
+      }
+   }
+
+   &-nav-link {
+      color: map-get(map-get($colours, text), light);
+      transition: $transition;
+
+      &:hover {
+         transform: translateX(1rem);
+      }
+   }
+
+   &-nav-icon {
+      color: map-get(map-get($colours, brand), primary);
+      margin-right: 1rem;
+   }
+
+   &-sub {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.6rem;
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         flex-direction: column-reverse;
+         justify-content: center;
+      }
+   }
+
+   &-legals-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3rem;
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         margin-bottom: 2rem;
+      }
+   }
+
+   &-legals-link {
+      color: map-get(map-get($colours, text), light);
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, sm)) {
+      
+      &-col {
+         width: 50%;
+         flex: 0 0 50%;
+
+         &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 3rem;
+         }
+      }
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, xs)) {
+      
+      &-col {
+         width: 100%;
+         flex: 0 0 100%;
+
+         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            margin-bottom: 3rem;
+         }
+      }
+   }
+}

@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.7;
+  color: map-get(map-get($colours, text), light);
+  font-family: map-get($typography, main), map-get($typography, fallback);
+
+  @media only screen and (max-width: map-get($breakpoints, xs)) {
+    font-size: 1.6rem;
+  }
+}
+
+a {
+  color: inherit;
+}

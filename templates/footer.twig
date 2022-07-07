@@ -1,0 +1,75 @@
+<footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-col">
+          <a href="/" class="footer-logo-container"><img src="{{Image(options.footer_logo).src}}" alt="Ordingo Logo" class="footer-logo"></a>
+          <p class="footer-text">{{options.footer_text}}</p>
+          <div class="footer-socials">
+            {% for item in options.social_links %}
+              <a href="{{item.url}}" class="footer-social"><ion-icon name="{{item.icon}}"></ion-icon></a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title primary">{{options.footer_menu_one_heading}}</h3>
+          <nav class="footer-nav">
+            <ul class="footer-nav-menu">
+              {% for item in footer_one.get_items %}
+                <li class="footer-nav-item {{ item.classes | join(' ') }}">
+                  <a class="footer-nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title tertiary">{{options.footer_menu_two_heading}}</h3>
+          <nav class="footer-nav">
+            <ul class="footer-nav-menu">
+              {% for item in footer_two.get_items %}
+                <li class="footer-nav-item {{ item.classes | join(' ') }}">
+                  <a class="footer-nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title secondary">{{options.footer_contact_heading}}</h3>
+          <nav class="footer-nav">
+            <ul class="footer-nav-menu">
+              <li class="footer-nav-item">
+                <span class="footer-nav-icon"><ion-icon name="mail"></ion-icon></span>
+                <a href="{{options.email}}">{{options.email}}</a>
+              </li>
+              <li class="footer-nav-item">
+                <span class="footer-nav-icon"><ion-icon name="call"></ion-icon></span>
+                <a href="{{options.phone}}">{{options.phone}}</a>
+              </li>
+              <li class="footer-nav-item">
+                <span class="footer-nav-icon"><ion-icon name="location"></ion-icon></span>
+                {{options.address}}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-sub">
+        <p class="footer-disclaimer">&copy; {{"now"|date('Y')}} {{site.name}} by App4. All rights reserved</p>
+        <nav class="footer-legals">
+          <ul class="footer-legals-menu">
+            {% for item in legal_links.get_items %}
+              <li class="footer-legals-item {{ item.classes | join(' ') }}">
+                <a class="footer-legals-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay"></div>
+
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

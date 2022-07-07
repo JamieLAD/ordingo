@@ -1,0 +1,340 @@
+.features {
+   padding: 12rem 0rem;
+
+   @media only screen and (max-width: map-get($breakpoints, md)) {
+      padding-bottom: 8rem;
+   }
+
+   @media only screen and (max-width: map-get($breakpoints, sm)) {
+      padding: 6rem 0;
+   }
+   
+   .section-title {
+      text-align: center;
+   }
+
+   .half-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         flex-direction: column;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         padding: 0 5rem;
+         align-items: flex-start;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         padding: 0 3rem;
+         align-items: flex-start;
+      }
+   }
+
+   &-preview {
+      position: relative;
+      width: 94rem;
+      flex: 0 0 94rem;
+
+      @media only screen and (max-width: map-get($breakpoints, xl)) {
+         width: 60%;
+         flex: 0 0 60%;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: 50%;
+         flex: 0 0 50%;
+         padding-right: 4rem;
+         position: sticky;
+         top: 3rem;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         width: 100%;
+         flex: 0 0 100%;
+         position: static;
+         padding-right: 0;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         display: none;
+      }
+   }
+
+   &-laptop {
+      background-image: url(../assets/img/laptop.png);
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      position: relative;
+      transform: translateX(-15%);
+
+
+      &::after {
+         content: "";
+         display: block;
+         padding-top: 58.84%;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         display: none;
+      }
+   }
+
+   &-screen {
+      background-image: url(../../assets/img/live-orders.jpg);
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 4.5%;
+      right: 11.5%;
+      width: 82%;
+
+      &::after {
+         content: "";
+         display: block;
+         padding-top: 58.84%;
+      }
+   }
+
+   &-card {
+      width: 100%;
+      max-width: 41rem;
+      position: absolute;
+      z-index: 100;
+      padding: 4rem;
+      border-radius: $border-radius;
+      right: 10rem;
+      bottom: -5rem;
+      transition: $transition;
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+      
+      &.primary {
+         background-color: map-get(map-get($colours, brand), primary-light);
+         color: map-get(map-get($colours, brand), primary);
+      }
+
+      &.secondary {
+         background-color: map-get(map-get($colours, brand), secondary-light);
+         color: map-get(map-get($colours, brand), secondary);
+      }
+
+      &.tertiary {
+         background-color: map-get(map-get($colours, brand), tertiary-light);
+         color: map-get(map-get($colours, brand), tertiary);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, xl)) {
+         right: 5rem;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         bottom: -15rem;
+      }
+
+      &.show-card {
+         max-height: 600px;
+         opacity: 1;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         position: static;
+         padding: 0;
+         max-width: none;
+         display: none;
+         max-height: none;
+
+         &.show-card {
+            display: block;
+         }
+      }
+   }
+
+   &-card-title {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         padding: 4rem 4rem 1rem 4rem;
+         margin: 0;
+      }
+   }
+
+   &-card-text {
+      font-size: 2rem;
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         padding: 0 4rem 4rem 4rem;
+      }
+   }
+
+   &-items {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         flex-direction: column;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: 50%;
+         flex: 0 0 50%;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         width: 100%;
+         flex: 0 0 100%;
+         margin-top: 2rem;
+         flex-wrap: wrap;
+         flex-direction: row;
+      }
+   }
+   
+   &-items-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         flex-direction: row;
+         flex-wrap: wrap;
+         width: 100%;
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: auto;
+      }
+
+      &:nth-of-type(1) {
+         padding-top: 3rem;
+
+         @media only screen and (max-width: map-get($breakpoints, lg)) {
+            padding-top: 0;
+         }
+      }
+
+      &:nth-of-type(3) {
+         padding-top: 10rem;
+
+         @media only screen and (max-width: map-get($breakpoints, lg)) {
+            padding-top: 0;
+         }
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         
+         &:nth-of-type(1) {
+            order: 1;
+         }
+
+         &:nth-of-type(2) {
+            order: 3;
+         }
+         
+         &:nth-of-type(3) {
+            order: 2;
+         }
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         width: 100%;
+         flex: 0 0 100%;
+      }
+   }
+
+   &-item {
+      position: relative;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 3rem;
+      transition: $transition;
+      cursor: pointer;
+      width: 100%;
+
+      @media only screen and (max-width: map-get($breakpoints, lg)) {
+         width: calc(50% - 1rem);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, md)) {
+         width: calc(25vw - 4rem);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, sm)) {
+         width: calc(50vw - 6rem);
+      }
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         width: 100vw;
+      }
+
+      &.primary {
+         background-color: map-get(map-get($colours, brand), primary-light);
+         color: map-get(map-get($colours, brand), primary);
+
+         &:hover,
+         &.active {
+            background-color: map-get(map-get($colours, brand), primary);
+            color: map-get(map-get($colours, utils), white);
+         }
+      }
+
+      &.secondary {
+         background-color: map-get(map-get($colours, brand), secondary-light);
+         color: map-get(map-get($colours, brand), secondary);
+
+         &:hover,
+         &.active {
+            background-color: map-get(map-get($colours, brand), secondary);
+            color: map-get(map-get($colours, utils), white);
+         }
+      }
+
+      &.tertiary {
+         background-color: map-get(map-get($colours, brand), tertiary-light);
+         color: map-get(map-get($colours, brand), tertiary);
+
+         &:hover,
+         &.active {
+            background-color: map-get(map-get($colours, brand), tertiary);
+            color: map-get(map-get($colours, utils), white);
+         }
+      }
+
+      &.accordion {
+
+         .features-item-text {
+            max-height: 300px;
+         }
+      }
+   }
+
+   &-item-icon {
+
+      ion-icon {
+         width: 4rem;
+         height: 4rem;
+      }
+   }
+
+   &-item-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-align: center;
+      max-width: 14ch;
+   }
+
+   &-item-text {
+      max-height: 0px;
+      transition: $transition-linear;
+      overflow: hidden;
+   }
+}

@@ -1,0 +1,11 @@
+<section class="hero">
+    <div class="hero-phones" style="background-image:url('{{Image(fields.hero_image).src}}')"></div>
+    <div class="container">
+        <h1 class="title">{{fields.hero_title}}</h1>
+        <p class="description">{{fields.hero_text}}</p>
+        <div class="buttons">
+        <a href="{{fields.hero_primary_button.url}}" class="button">{{fields.hero_primary_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        <a href="{{fields.hero_secondary_button.url}}" class="button button-text">{{fields.hero_secondary_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+    </div>
+</section>

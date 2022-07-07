@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+      <a href="/" class="logo-container"><img src="{{Image(options.logo).src}}" alt="Ordingo Logo" class="logo"></a>
+      <div class="header-inner">
+        <nav class="nav main-nav">
+          <ul class="nav-menu">
+            {% for item in navigation.get_items %}
+              <li class="nav-item {{ item.classes | join(' ') }}">
+                <a class="nav-link {% if item.current %}active{% endif %}" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="{{options.header_button.url}}" class="button">{{options.header_button.title}} <ion-icon name="arrow-forward-outline"></ion-icon></a>
+      </div>
+    </div>
+  </header>

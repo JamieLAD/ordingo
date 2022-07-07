@@ -1,0 +1,67 @@
+.faq {
+   background-color: map-get(map-get($colours, utils), offwhite);
+   padding: 12rem 0;
+
+   @media only screen and (max-width: map-get($breakpoints, sm)) {
+      padding: 6rem 0 6rem 0;
+      background-image: none;
+   }
+
+   .section-title {
+      text-align: center;
+   }
+
+   &-items {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   &-item {
+      width: 100%;
+      background-color: map-get(map-get($colours, utils), white);
+      border: 1px solid map-get(map-get($colours, utils), lightgrey);
+      border-radius: 1rem;
+
+      &.active {
+
+         .faq-item-inner {
+            max-height: 200px;
+         }
+
+         .faq-item-icon {
+            transform: rotate(180deg);
+            transform-origin: center;
+         }
+      }
+   }
+
+   &-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+      cursor: pointer;
+
+      @media only screen and (max-width: map-get($breakpoints, xs)) {
+         padding: 1.5rem;
+      }
+   }
+
+   &-item-inner {
+      max-height: 0px;
+      overflow: hidden;
+      transition: $transition-linear;
+      box-sizing: border-box;
+
+      p {
+         padding: 0 3rem 3rem 3rem;
+
+         @media only screen and (max-width: map-get($breakpoints, xs)) {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+         }
+      }
+   }
+}
